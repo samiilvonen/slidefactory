@@ -1,0 +1,19 @@
+BootStrap: docker
+From: pandoc/core:2.10
+
+%setup
+  mkdir -p          $SINGULARITY_ROOTFS/slidetools/filter
+  mkdir             $SINGULARITY_ROOTFS/slidetools/theme
+  mkdir             $SINGULARITY_ROOTFS/slidetools/reveal.js
+  cp convert.sh     $SINGULARITY_ROOTFS/slidetools/
+  cp filter/*       $SINGULARITY_ROOTFS/slidetools/filter/
+  cp -r theme/*     $SINGULARITY_ROOTFS/slidetools/theme/
+  chmod a+x         $SINGULARITY_ROOTFS/slidetools/convert.sh
+
+%post
+  apk --no-cache add bash wget
+  cd /slidetools/reveal.js && \
+    wget -c https://github.com/hakimel/reveal.js/archive/4.0.2.tar.gz -O - | tar --strip-components=1 -x -z
+
+%runscript
+  exec /slidetools/convert.sh "$@"

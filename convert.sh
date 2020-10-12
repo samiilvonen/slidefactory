@@ -198,7 +198,7 @@ $orig_root/$_arg_inputfile \
 --mathjax=${_arg_mathjax} \
 --lua-filter=filter/background-image.lua \
 -s \
---resource-path=${orig_root} \
+--resource-path=.:${orig_root} \
 ${selfcontained} \
 -o $orig_root/$outputfile"
 

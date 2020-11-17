@@ -68,7 +68,7 @@ $else$
 <section class="slide level1 title-slide" data-background-size="contain" data-background="theme/default/img/title-en.jpg">
 $endif$
 $endif$
-  <h1>$title$</h1>
+  <h1 class="theme">$title$</h1>
 $if(subtitle)$
   <p class="subtitle">$subtitle$</p>
 $endif$
@@ -366,7 +366,6 @@ $if(mathjax)$
         },
 $endif$
 
-        // reveal.js plugins
         plugins: [
 $if(mathjax)$
           RevealMath,

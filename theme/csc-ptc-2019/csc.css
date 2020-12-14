@@ -196,7 +196,7 @@ body {
 .reveal ol,
 .reveal dl,
 .reveal ul {
-  display: inline-block;
+  display: inblock;
 }
 .reveal ol {
   list-style-type: decimal;
@@ -529,32 +529,28 @@ div.sourceCode {
 .reveal .section-slide p {
   font-size: 0.8em;
 }
-
-.reveal .author-slide h1,
-.reveal .author-slide p,
-.reveal .author-slide div {
-  margin-left: calc(0.24 * var(--xsize));
-  text-align: left;
-}
 .reveal .slides > section.author-slide h1:first-child {
   padding-bottom: 1.4em;
 }
 .reveal .author-slide h1 {
-  margin-top:  calc(0.58 * var(--ysize));
+  margin-top:  calc(0.50 * var(--ysize));
+  margin-left: calc(0.242
+                    * var(--xsize));
   font-size:   0.6em;
   font-weight: bold;
 }
 .reveal .author-slide p,
-.reveal .author-slide div {
-  padding-bottom: 1.4em;
-  font-size:      0.5em;
+.reveal .author-slide div.line-block {
+    margin-left: calc(0.242 * var(--xsize));
+    font-size: 0.5em;
 }
 .reveal .author-slide img {
   position: absolute;
   width: calc(0.142 * var(--xsize));
-  top:   calc(0.578 * var(--ysize));
-  left:  calc(0.073 * var(--xsize));
+  top:   calc(0.505 * var(--ysize));
+  left:  calc(0.076 * var(--xsize));
   border: 0;
+  border-radius: 50%;
 }
 
 /*********************************************
